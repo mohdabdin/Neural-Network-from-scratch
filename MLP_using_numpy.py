@@ -146,8 +146,8 @@ class MLP(object):
             print('epoch ', i, 'training accuracy %.2f' %
                     np.mean(np.matrix(train_acc)).item())
         
-        
-mlp = MLP()
-X_train, y_train, X_test, y_test = mnist.load()
-X_train, y_train = mlp.prep_data(X_train, y_train)
-mlp.fit(X_train, y_train)
+if __name__ == '__main__':
+    mlp = MLP()
+    X_train, y_train, X_test, y_test = mnist.load()
+    X_train, y_train = mlp.prep_data(X_train, y_train)
+    mlp.fit(X_train, y_train)
